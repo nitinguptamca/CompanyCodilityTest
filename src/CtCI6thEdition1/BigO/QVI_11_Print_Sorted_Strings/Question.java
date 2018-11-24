@@ -1,6 +1,5 @@
 package CtCI6thEdition1.BigO.QVI_11_Print_Sorted_Strings;
 
-
 public class Question {
 
 	public static int numChars = 26;
