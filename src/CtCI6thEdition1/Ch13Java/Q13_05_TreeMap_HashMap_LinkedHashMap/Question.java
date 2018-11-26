@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public class Question {
 	public static void insertAndPrint(AbstractMap<Integer, String> map) {
-		int[] array = {1, -1, 0};
+		int[] array = {1, -1, 0,7,3};
 		for (int x : array) {
 			map.put(x, Integer.toString(x));
 		}

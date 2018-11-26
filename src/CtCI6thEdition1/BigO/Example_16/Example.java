@@ -18,7 +18,7 @@ public class Example {
 	}
 	
 	public static void main(String[] args) {
-		powersOf2(4);
+		System.out.println("final out put"+powersOf2(16));
 	}
 
 }
