@@ -33,6 +33,7 @@ public class MaxWordCountinGroup {
 				.getValue();
 
 		System.out.println("Value" + value);
+		//solution2
 
 		//
 
@@ -95,6 +96,9 @@ public class MaxWordCountinGroup {
 	      .map(Entry::getKey)
 	      .orElse(null);
 	System.out.println(mostFrequentWoed);
+	
+	
+
 
 	}
 
