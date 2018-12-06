@@ -1,0 +1,209 @@
+nitingupta@mca07
+
+Spring Transaction Advice
+Consider the following configuration for a bean in Spring:
+
+<tx:attributes>
+    <tx:method name="get*" read-only="true"/>
+    <tx:method name="*"/>
+</tx:attributes>
+This is defined inside a tx:advice. If this tx:advice is applied to all the methods of a an interface com.rs.Svc, which of the following statements are true?
+
+Pick all that apply
+ All methods of com.rs.Svc with names starting with get will be executed in a READ-ONLY transaction
+ All methods of com.rs.Svc whose names do not start with get will be executed in a READ-WRITE transaction
+ All methods of com.rs.Svc whose names do not start with get will be executed without transaction semantics
+ All methods of com.rs.Svc will be executed in a READ-WRITE transaction
+ All methods of com.rs.Svc will be executed without transaction semantics
+------------------------------------
+A website has two modes of operation - headlines only and full articles. When a user first visits the website, he is asked to choose one of the modes, and the website needs to remember this choice for the rest of this session. Which of the following techniques can be used for this purpose?
+
+Pick all that apply
+ Use of a Session Object
+ Use of Cookies
+ Use of ServletConfig
+ Use of Jquery/JavaScript
+ Use of the doPost() method
+0--------------------------------------
+Handler Mapping
+Which of the following statements about handler mapping in Spring MVC are true?
+
+Pick all that apply
+ A handler mapping maps a request to a HandlerExecutionChain that contains a handler and zero or more handler interceptors
+ All handler interceptors must be applied after the actual handler
+ All handler interceptors must be applied before the actual handler
+ The actual handler is always called
+-------------------------------
+While using Hibernate, an object X is deleted from a persistent collection. Which of the following statements are true?
+
+Pick all that apply
+ Object X is now in detached state
+ Trying to delete an object from a persistent collection results in a RuntimeError
+ The database object corresponding to Object X is deleted at transaction commit time if FlushMode is COMMIT.
+ The database object corresponding to Object X is deleted only if FlushMode is AUTO
+ Object X is garbage collected immediately.
+--------------------------------------------------
+HTTPS
+You are the developer of a website http://www.x.com that is currently hosted on a shared hosting server in the cloud. Currently it only serves HTTP. The server is behind a firewall that only allows connections on port 80 (www) through and disallows all other traffic. You have now been asked to convert the whole site to use the https protocol. All requests to http://x.com/abc/def/ should automatically be redirected to https://www.x.com/abc/def. Which of the following are changes you must make to do this?
+
+Pick all that apply
+ You'll need to get an SSL certificate for www.x.com
+ You'll need a dedicated IP address for your domain.
+ You will need to open port 443 (https) in the firewall
+ You'll need to close port 80 (www) on the firewall for security
+ The hard-disk that stores the database and the webserver files needs to be modified to use disk encryption
+--------------------------------------------------
+ web developer has implemented a site containing a number of objects, and a request to GET /update?id=42,value=xyz results in updating the value of object with id 42. Which of the following statements are true?
+
+Pick all that apply
+ This will never work because GET can only get values, and will not update values
+ This is guaranteed to work, because URLs with query parameters are not allowed to be cached by the browser, or the web server
+ Since GET is an idempotent operation, only the first GET request will update the object, and all subsequent ones are guaranteed to be ignored
+ This will not work if the application depends on cookies, because cookies are only sent on POST requests, not GET requests
+ If we ignore caching, this will work, but is considered bad practice
+-------------------------------------------------------------------------
+You are in Section 6: HTTP Knowledge, question 4 of 5. There are a total of 9 sections.
+
+Cookies Expiry
+Which of the following statements about HTTP cookies are true?
+
+Pick all that apply
+ If no expiry date is specified for a cookie, it never expires
+ If no expiry date is specified for a cookie, it expires in 86400 seconds (1 day)
+ A persistent cookie cannot be deleted by the user
+ If no expiry date is specified for a cookie, the cookie will get deleted when the user closes the window/tab (but does not close the browser)
+ If no expiry date is specified for a cookie, the cookie will get deleted when the user closes the browser
+----------------------------------------------
+
+You are in Section 6: HTTP Knowledge, question 5 of 5. There are a total of 9 sections.
+
+Cookie Domains
+A user visits the URL http://x.com/ and the HTTP response contains the following cookies:
+
+Set-Cookie: a=aa
+Set-Cookie: b=bb; Domain=x.com
+Set-Cookie: c=cc; Domain=.x.com
+Set-Cookie: d=dd; Domain=www.x.com
+Set-Cookie: e=ee; Domain=docs.x.com
+Immediately after this, the user visits http://www.x.com/p1/. Which of the following cookies will be sent by the browser?
+
+Pick all that apply
+ a=aa
+ b=bb
+ c=cc
+ d=dd
+ e=ee
+-----------------------------------------
+Consider the following lines in the <head> section of a JavaScript page:
+
+<head>
+  <script src="file1.js"></script>
+  <script src="file2.js"></script>
+</head>
+Unfortunately, loading the two javascript files is slowing down the rendering of this page, and it is required to improve the situation. To complicate matters, the code in file2.js uses some of the code from file1.js so it would be a problem if they got loaded in the wrong order. Assuming that the HTML in the rest of the page can be rendered properly without the JavaScript (i.e. there are appropriate fallbacks), which of the following statements are true?
+
+Pick all that apply
+ It is not possible under any circumstances for the webpage to start rendering before loading the JavaScript files, as long as the <script> tag is in the <head> section.
+ This problem can be fixed by using the async attribute on both the <script> tags
+ This problem can be fixed by using the defer attribute on both the <script> tags
+ This problem can be fixed by using the async attribute for file1.js and the defer attribute for file2.js
+ This problem can be fixed by using the defer attribute for file1.js and the async attribute for file2.js
+------------------------------------------------------------
+Browser Storage Options
+Which of the following statements about cookies, localStorage, and sessionStorage are true?
+
+Pick all that apply
+ Your client-side code can track all changes to localStorage or sessionStorage by adding a listener for the 'storage' event
+ sessionStorage data is stored on the server, but cookies and localStorage are stored on the browser side
+ All the cookies related to a website are sent from the browser to the server on every HTTP request, but the localStorage and sessionStorage data is not sent to the server
+ total sessionStorage size per website cannot be more than 4KB
+ Changes made to sessionStorage of a logged in user on one device/browser are available on all other devices/browsers for the same logged in user as long as the browsesr supports html5
+----------------------------------------------
+In an HTML/CSS page with JavaScript, which of the following techniques is the most suitable for showing the same content in different views on devices with different sizes?
+
+Pick the closest option
+ User Agents
+ Media queries
+ JQuery
+ HTML Style
+----------------------------
+Order of Output
+Assume that you are using a third-party JavaScript library, which provides you with function called doStuff(callback). This function does some complex calculation asynchronously, and then calls the callback function with two arguments callback(results, err). If there was any error in the calculation, then err will be a non-null string. If the operation was a success, results will be a non-null string. Consider the following JavaScript code that you have written:
+
+console.log("A");
+doStuff(function f(results, err) => {
+    if (err) {
+        console.log("B");
+    }
+    console.log("C");
+}
+console.log("D");
+Which of the following output sequences can NEVER be produced by this code. (Note: you have to choose those sequences of outputs that are impossible to produce as the output of the above code under any circumstances.)
+
+Pick all that apply
+ A B C D
+ A C D
+ A D C
+ A D B C
+ None of the above (i.e. under the appropriate circumstances each of the above sequences are possible.)
+------------------------------------------
+Client Side
+Which of the following can't be done with client-side JavaScript?
+
+Pick the closest option
+ Validating a form
+ Sending a form's contents by email
+ Storing the form's contents to a database file on the server
+ None of the above
+-----------------------------
+Consider the following SQL query:
+
+select Student.name
+from Student
+where Student.id in (
+    select Results.student_id
+    from Results
+    order by Results.score)
+Assuming that this query returns more than 1 row as output, what the first row of the output guaranteed to contain?
+
+Pick the closest option
+ The name of the Student with highest score
+ The name of the Student with lowest score
+ The name of the Student with highest id
+ The name of the Student with lowest id
+ None of the above
+-----------------------------
+select max(age), min(age)
+from employees
+group by dept_id
+Assume that there are 10 different departments (i.e. 10 different values for dept_id in the employees table). How many rows are there in the result of this query?
+
+Pick the closest option
+ Exactly 1
+ Any number from 1 to 10 depending on the values of the data (age, dept_id) in the table
+ Any number from 0 to 10 depending on the values of the data (age, dept_id) in the table
+ Exactly 10
+ Exactly 20
+----------------------------
+
+For scalability of a backend database, a company is considering a distributed database, and is looking into replication and sharding techniques. Which of the following statements about replication and sharding are true?
+
+Pick all that apply
+ Replication of data improves availability of data in case one or more servers are unavailable (e.g. due to a crash)
+ Sharding improves the scalability of the system by allowing more data to be processed in the same time
+ If an RDBMS is chosen as the backend database, you can do replication, but sharding is not supported by RDBMS
+ If a NoSQL database is chosen, the choice must be made carefully because each NoSQL database can provide either replication, or sharding, but none of them can provide both
+ None of the above
+-----------------------------
+You are in Section 9: NoSQL, question 3 of 3. This is the last section.
+
+NoSQL
+NoSQL databases are a popular alternative to RDBMS these days. Which of the following statements about NoSQL databases are true?
+
+Pick all that apply
+ Most NoSQL databases typically give up one of the ACID properties of RDBMS in return for scalability or performance
+ NoSQL databases use JavaScript as a query language instead of SQL
+ MongoDB, Cassandra, Amazon's Dynamo are all examples of NoSQL databases
+ NoSQL databases are an open source alternative to Oracle databases
+----------------------------------------
+
