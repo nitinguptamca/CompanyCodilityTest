@@ -1,4 +1,5 @@
-package company.creditsuisse.company.credit.suisse;
+package company.creditsuisse;
+
 
 /**
  * problem statement We have sorted array find all possible combination of sum 8
