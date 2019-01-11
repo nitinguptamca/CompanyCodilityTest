@@ -99,11 +99,11 @@ public class ProcessingData {
 		Comparator<Company> comparator = Comparator.comparing(Company::getSalary);
 		Optional<Company> process2 = listOfLine.stream()
 				.collect(Collectors.minBy(Comparator.comparing(Company::getSalary)));
-		listOfLine.stream().collect(Collectors.toMap(Company::getCompanyName,
+		/*listOfLine.stream().collect(Collectors.toMap(Company::getCompanyName,
 				BinaryOperator.maxBy(Comparator.comparing(Company::getSalary))));
 
 		System.out.println("************************" + process2);
-
+*/
 	}
 
 	/*
