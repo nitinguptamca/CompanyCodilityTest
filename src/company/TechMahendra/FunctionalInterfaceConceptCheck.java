@@ -38,7 +38,7 @@ interface ShortToByteFunction {
 
 public class FunctionalInterfaceConceptCheck {
 	/// Legacy Functional Interfaces
-	public static void main1(String[] args) {
+	public static void main(String[] args) {
 		Thread thread = new Thread(() -> System.out.println("Hello From Another Thread"));
 		thread.start();
 		Map<String, Integer> nameMap = new HashMap<>();
@@ -90,10 +90,20 @@ public class FunctionalInterfaceConceptCheck {
 		names.replaceAll(String::toUpperCase);
 		List<String> namesWithA = names.stream().filter(name -> name.startsWith("A")).collect(Collectors.toList());
 		List<Integer> values = Arrays.asList(3, 5, 8, 9, 12);
+		values.stream().mapToInt(a -> a).sum();
+		values.stream().mapToInt(Integer::intValue).sum();
+		//// IntStream perfect valid scenario
+
+		int[] intArray = IntStream.of(1, 2, 3, 4, 5).toArray();
+		List<Integer> ints = IntStream.of(1, 2, 3, 4, 5).mapToObj(Integer::valueOf).collect(Collectors.toList());
+		List<Integer> ints1 = IntStream.of(1, 2, 3, 4, 5).boxed().collect(Collectors.toList());
+
+		// ***********************
 		int sum = values.stream().reduce(0, (i1, i2) -> i1 + i2);
 		sum = values.stream().mapToInt(a -> a).sum();
 		int[] values11 = { 3, 5, 8, 9, 12 };
 		sum = Arrays.stream(values11).sum();
+		int[]array2 =  IntStream.rangeClosed(1, 10).toArray();
 
 		List<String> string = Arrays.asList("aA12Z22", "qwerty", "ABCDEF0");
 

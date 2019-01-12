@@ -13,7 +13,7 @@ package company.creditsuisse;
 public class FindSum8 {
 
 	public static void main(String[] args) {
-		int[] sortedArray = { -7, -5, -4, -3, -2, -1, 0, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 17, 19, 21 };
+		int[] sortedArray = { 9, -7, -5, -4, -3, -2, -1, 0, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 17, 19, 21 };
 		String possibleCombination = "";
 		// solution 1
 		/*
