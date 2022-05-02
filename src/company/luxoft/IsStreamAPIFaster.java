@@ -5,8 +5,8 @@ import java.util.stream.Stream;
 
 import CtCI6thEdition1.CtCILibrary.AssortedMethods;
 
-public class IsStreamAPIFaster {
-
+public class  {
+	IsStreamAPIFaster
 	public static int[] array = AssortedMethods.randomArray(9999999, 1, 9);
 
 	public static void main(String[] args) {

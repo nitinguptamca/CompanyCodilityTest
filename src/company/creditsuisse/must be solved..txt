@@ -7,7 +7,8 @@ Consider the following configuration for a bean in Spring:
     <tx:method name="get*" read-only="true"/>
     <tx:method name="*"/>
 </tx:attributes>
-This is defined inside a tx:advice. If this tx:advice is applied to all the methods of a an interface com.rs.Svc, which of the following statements are true?
+This is defined inside a tx:advice. If this tx:advice is applied to all the methods of a an interface com.rs.Svc,
+which of the following statements are true?
 
 Pick all that apply
  All methods of com.rs.Svc with names starting with get will be executed in a READ-ONLY transaction
@@ -16,7 +17,10 @@ Pick all that apply
  All methods of com.rs.Svc will be executed in a READ-WRITE transaction
  All methods of com.rs.Svc will be executed without transaction semantics
 ------------------------------------
-A website has two modes of operation - headlines only and full articles. When a user first visits the website, he is asked to choose one of the modes, and the website needs to remember this choice for the rest of this session. Which of the following techniques can be used for this purpose?
+A website has two modes of operation - headlines only and full articles.
+When a user first visits the website, he is asked to choose one of the modes,
+ and the website needs to remember this choice for the rest of this session.
+ Which of the following techniques can be used for this purpose?
 
 Pick all that apply
  Use of a Session Object
@@ -138,7 +142,9 @@ doStuff(function f(results, err) => {
     console.log("C");
 }
 console.log("D");
-Which of the following output sequences can NEVER be produced by this code. (Note: you have to choose those sequences of outputs that are impossible to produce as the output of the above code under any circumstances.)
+Which of the following output sequences can NEVER be produced by this code.
+(Note: you have to choose those sequences of outputs that are impossible to
+produce as the output of the above code under any circumstances.)
 
 Pick all that apply
  A B C D
